@@ -31,6 +31,7 @@ const displayAI = (aies) => {
                 <button onclick="handleShowDetails('${ai.id}')" class="hover:opacity-90 active:opacity-60"><i class="bi bi-arrow-right-circle-fill text-4xl text-[#EB5757]"></i></button>
             </aside>
         </div>`;
+        toggleLoadingSpinner(false);
         aiContainer.appendChild(aiCard);
     });
 };
@@ -96,4 +97,12 @@ const showPhoneDetails = (inputAIDetails) => {
     ai_details_modal.showModal();
 };
 
+const toggleLoadingSpinner = (isLoading) => {
+    const loadingSpinner = document.getElementById("loader");
+    if (!isLoading){
+        loadingSpinner.classList.add("hidden");
+    }
+};
+
+toggleLoadingSpinner(true);
 loadPhone();

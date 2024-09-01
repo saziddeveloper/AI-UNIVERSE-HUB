@@ -33,13 +33,16 @@
     </header>
     <main id="ai-contianer" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <!-- Entry Element Through API & DOM Manipulation on This Container -->
+        <div id="loader" class="mt-10 absolute top-[110px] md:top-[120px] lg:top-[125px] left-[170px] md:left-[365px] lg:left-[670px]">
+            <span class="loading loading-spinner text-info"></span>
+        </div>
         <!-- Modal -->
         <dialog id="ai_details_modal" class="modal">
             <!-- This isn't empty data add through API -->
         </dialog>
     </main>
     <div class="mt-10 flex justify-center">
-        <button class="btn text-white bg-[#EB5757] rounded-lg hover:bg-[#c91c1c93] active:bg-[#f30404]">See More</button>
+        <button onclick="seeMore()" class="btn text-white bg-[#EB5757] rounded-lg hover:bg-[#c91c1c93] active:bg-[#f30404]">See More</button>
     </div>
     <script src="js/ai.js"></script>
 </body>
