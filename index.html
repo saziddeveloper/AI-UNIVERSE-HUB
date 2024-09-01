@@ -31,79 +31,11 @@
             <button class="btn text-white bg-[#EB5757] rounded-lg hover:bg-[#c91c1c93] active:bg-[#f30404]">Sort By Date</button>
         </div>
     </header>
-    <main class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-        <div class="w-[311px] md:w-[340px] lg:w-[415px] h-[507px] md:h-[530px] lg:h-[580px] rounded-xl border p-5">
-            <img src="img/Rectangle23.png" alt="">
-            <h2 class="mt-6 font-semibold text-[25px] text-[#111111]">Features</h2>
-            <ul class="mt-3">
-                <li class="text-[#585858]">1. <span>Natural language processing</span></li>
-                <li class="text-[#585858]">2. <span>Contextual understanding</span></li>
-                <li class="text-[#585858]">3. <span>Text generation</span></li>
-            </ul>
-            <div class="my-7 rounded-lg h-[2px] bg-[#1111111c]"></div>
-            <div class="flex justify-between">
-                <aside class="flex flex-col gap-3">
-                    <h2 class="font-semibold text-[25px] text-[#111111]">ChatGPT</h2>
-                    <div class="flex gap-2 ml-[1px]">
-                        <i class="bi bi-calendar-week"></i>
-                        <p class="font-medium text-[#585858] mt-[1px]">11/01/2022</p>
-                    </div>
-                </aside>
-                <aside class="flex items-center">
-                    <button class="hover:opacity-90 active:opacity-60"><i class="bi bi-arrow-right-circle-fill text-4xl text-[#EB5757]"></i></button>
-                </aside>
-            </div>
-        </div>
+    <main id="ai-contianer" class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
         <!-- Entry Element Through API & DOM Manipulation on This Container -->
         <!-- Modal -->
-        <!-- <button class="btn" onclick="my_modal_4.showModal()">open modal</button> -->
-        <dialog id="my_modal_4" class="modal">
-            <div class="modal-box w-[340px] md:w-[490px] lg:w-[920px] max-w-5xl rounded-xl p-0">
-                <form method="dialog">
-                    <button class="absolute bg-[#EB5757] text-white w-12 h-12 text-[20px] btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
-                </form>
-                <div class="p-2 md:px-12 lg:px-16 md:py-8 lg:py-8 flex flex-col-reverse lg:flex-row justify-between gap-4 md:gap-8 lg:gap-4">
-                    <aside class="border border-[#EB5757] bg-[#eb57570a] rounded-xl w-[323px] md:w-96 lg:w-96 h-[475px] md:h-[460px] lg:h-[460px] p-4">
-                        <h1 class="font-semibold text-[18px] md:text-[20px] lg:text-[20px] text-[#111111]">ChatGPT is an AI-powered chatbot platform that uses OpenAI's GPT technology to simulate human conversation.</h1>
-                        <div class="flex gap-4 my-5">
-                            <aside class="bg-[#FFFFFF] rounded-xl w-28 h-28 flex justify-center items-center">
-                                <h3 class="font-bold text-[#03A30A] text-center">$10/<br>month<br>Basic</h3>
-                            </aside>
-                            <aside class="bg-[#FFFFFF] rounded-xl w-28 h-28 flex justify-center items-center">
-                                <h3 class="font-bold text-[#F28927] text-center">$50/<br>month<br>Pro</h3>
-                            </aside>
-                            <aside class="bg-[#FFFFFF] rounded-xl w-28 h-28 flex justify-center items-center">
-                                <h3 class="font-bold text-[#EB5757] text-center">Contact<br>us<br>Enterprise</h3>
-                            </aside>
-                        </div>
-                        <div class="grid grid-cols-2 gap-2">
-                            <aside>
-                                <h2 class="font-semibold text-[20px] text-[#111111]">Features</h2>
-                                <ul class="mt-3">
-                                    <li class="text-[#585858] text-[15px]">• <span>Customizable responses</span></li>
-                                    <li class="text-[#585858] text-[15px]">• <span>Multilingual support</span></li>
-                                    <li class="text-[#585858] text-[15px]">• <span>Seamless integration</span></li>
-                                </ul>
-                            </aside>
-                            <aside>
-                                <h2 class="font-semibold text-[20px] text-[#111111]">Integrations</h2>
-                                <ul class="mt-3">
-                                    <li class="text-[#585858] text-[15px]">• <span>FB Messenger</span></li>
-                                    <li class="text-[#585858] text-[15px]">• <span>Slack</span></li>
-                                    <li class="text-[#585858] text-[15px]">• <span>Telegram</span></li>
-                                </ul>
-                            </aside>
-                        </div>
-                    </aside>
-                    <aside class="border rounded-xl w-[323px] md:w-96 lg:w-96 h-[460px] md:h-[500px] lg:h-[460px] p-4">
-                        <img src="img/Rectangle15.png" alt="">
-                        <div class="flex flex-col items-center">
-                            <h2 class="mt-14 lg:mt-8 text-center font-semibold text-[20px] text-[#111111]">Hi, how are you doing today?</h2>
-                            <p class="mt-7 lg:mt-4 w-[300px] text-[#585858] text-center">I'm doing well, thank you for asking. How can I assist you today?</p>
-                        </div>
-                    </aside>
-                </div>
-            </div>
+        <dialog id="ai_details_modal" class="modal">
+            <!-- This isn't empty data add through API -->
         </dialog>
     </main>
     <div class="mt-10 flex justify-center">
