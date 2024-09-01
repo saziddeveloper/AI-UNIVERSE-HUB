@@ -24,8 +24,54 @@
         }
     </style>
 </head>
-<body>
-    
-    <script src="js/ai.js></script>
+<body class="p-8 pt-2">
+    <header class="flex flex-col items-center">
+        <h1 class="font-semibold text-[38px] md:text-[45px] lg:text-[45px] text-[#111111]">AI Universe Hub</h1>
+        <div class="mt-3">
+            <button class="btn text-white bg-[#EB5757] rounded-lg hover:bg-[#c91c1c93] active:bg-[#f30404]">Sort By Date</button>
+        </div>
+    </header>
+    <main class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+        <div class="w-[311px] md:w-[340px] lg:w-[415px] h-[507px] md:h-[530px] lg:h-[580px] rounded-xl border-2 p-5">
+            <img src="img/Rectangle23.png" alt="">
+            <h2 class="mt-6 font-semibold text-[25px] text-[#111111]">Features</h2>
+            <ul class="mt-3">
+                <li class="text-[#585858]">1. <span>Natural language processing</span></li>
+                <li class="text-[#585858]">2. <span>Contextual understanding</span></li>
+                <li class="text-[#585858]">3. <span>Text generation</span></li>
+            </ul>
+            <div class="my-7 rounded-lg h-[2px] bg-[#1111111c]"></div>
+            <div class="flex justify-between">
+                <aside class="flex flex-col gap-3">
+                    <h2 class="font-semibold text-[25px] text-[#111111]">ChatGPT</h2>
+                    <div class="flex gap-2 ml-[1px]">
+                        <i class="bi bi-calendar-week"></i>
+                        <p class="font-medium text-[#585858] mt-[1px]">11/01/2022</p>
+                    </div>
+                </aside>
+                <aside class="flex items-center">
+                    <button class="hover:opacity-90 active:opacity-60"><i class="bi bi-arrow-right-circle-fill text-4xl text-[#EB5757]"></i></button>
+                </aside>
+            </div>
+        </div>
+        <!-- Entry Element Through API & DOM Manipulation on This Container -->
+        <!-- You can open the modal using ID.showModal() method -->
+        <button class="btn" onclick="my_modal_4.showModal()">open modal</button>
+        <dialog id="my_modal_4" class="modal">
+            <div class="modal-box w-11/12 max-w-5xl">
+                <form method="dialog">
+                    <button class="absolute bg-[#EB5757] text-white w-12 h-12 text-[20px] btn btn-sm btn-circle btn-ghost right-2 top-2">✕</button>
+                </form>
+                <h3 class="text-lg font-bold">Hello!</h3>
+                <p class="py-4">Click the button below to close</p>
+                <div class="modal-action">
+                </div>
+            </div>
+        </dialog>
+    </main>
+    <div class="mt-10 flex justify-center">
+        <button class="btn text-white bg-[#EB5757] rounded-lg hover:bg-[#c91c1c93] active:bg-[#f30404]">See More</button>
+    </div>
+    <script src="js/ai.js"></script>
 </body>
 </html>
