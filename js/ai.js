@@ -1,3 +1,5 @@
+let displayedCount = 6; // Number of cards to display initially
+
 const loadPhone = async () => {
     const res = await fetch(`https://openapi.programming-hero.com/api/ai/tools`);
     const data = await res.json();
@@ -7,7 +9,9 @@ const loadPhone = async () => {
 
 const displayAI = (aies) => {
     const aiContainer = document.getElementById("ai-contianer");
-    aies.forEach(ai => {
+    aiContainer.innerHTML = ''; // Clear the container before rendering
+
+    aies.slice(0, displayedCount).forEach(ai => {
         const aiCard = document.createElement("div");
         aiCard.classList = `w-[311px] md:w-[340px] lg:w-[415px] h-[507px] md:h-[520px] lg:h-[565px] rounded-xl border p-5`;
         aiCard.innerHTML = `
@@ -31,9 +35,14 @@ const displayAI = (aies) => {
                 <button onclick="handleShowDetails('${ai.id}')" class="hover:opacity-90 active:opacity-60"><i class="bi bi-arrow-right-circle-fill text-4xl text-[#EB5757]"></i></button>
             </aside>
         </div>`;
-        toggleLoadingSpinner(false);
         aiContainer.appendChild(aiCard);
     });
+    toggleLoadingSpinner(false);
+};
+
+const seeMore = () => {
+    displayedCount = Infinity; // Set to a large number to display all cards
+    loadPhone(); // Reload to display all cards
 };
 
 const handleShowDetails = async (inputAIid) => {
