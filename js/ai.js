@@ -2,7 +2,7 @@ let displayedCount = 6; // Number of cards to display initially
 let isSortedByDate = false; // Flag to check if sorting is applied
 let aies = []; // Store fetched AI tools
 
-const loadPhone = async () => {
+const loadAI = async () => {
     const res = await fetch(`https://openapi.programming-hero.com/api/ai/tools`);
     const data = await res.json();
     aies = data.data.tools;
@@ -126,4 +126,4 @@ const toggleLoadingSpinner = (isLoading) => {
 };
 
 toggleLoadingSpinner(true);
-loadPhone();
+loadAI();
